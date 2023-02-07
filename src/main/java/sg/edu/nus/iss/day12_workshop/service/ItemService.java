@@ -9,13 +9,13 @@ import sg.edu.nus.iss.day12_workshop.repository.ItemRepo;
 
 @Service
 public class ItemService {
-    
-//    @Autowired
+
+    @Autowired
     ItemRepo itmRepo;
 
-    public ItemService() {
-        itmRepo = new ItemRepo();
-    }
+    // public ItemService() {
+    // itmRepo = new ItemRepo();
+    // }
 
     public List<Item> retriveItemList() {
         return itmRepo.getCartItems();
