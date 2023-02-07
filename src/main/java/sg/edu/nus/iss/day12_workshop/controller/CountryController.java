@@ -29,7 +29,7 @@ public class CountryController {
         return ctySvc.createCountry(cty);
     }
 
-    @GetMapping("/list")
+    @RequestMapping(path="/list", method=RequestMethod.GET)
     public String displayCountryList(Model model) {
         List<Country> ctyList = ctySvc.getAllCountries();
         model.addAttribute("countriesList", ctyList);
